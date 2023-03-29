@@ -12,7 +12,8 @@ import json
 @api_view(['GET'])
 def torneo(request,id_t):  #Prueba de consulta por atributo ide
     if request.method == 'GET':
-        response = requests.get("https://jsonplaceholder.typicode.com/users") # Cambiar url
+#         response = requests.get("https://jsonplaceholder.typicode.com/users") # Cambiar url
+        response = requests.get("https://ip:port/resultados") # Cambiar url
         return JsonResponse(response.json(), safe=False)
 
 
