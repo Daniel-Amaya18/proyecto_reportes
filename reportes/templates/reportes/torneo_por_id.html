@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página de test</title>
+    <style>
+        body {
+          font-family: Arial, sans-serif;
+          margin: 20px;
+        }
+        label {
+          display: block;
+          margin-bottom: 5px;
+          font-weight: bold;
+        }
+        input[type="text"],
+        input[type="email"],
+        textarea {
+          width: 300px;
+          padding: 5px;
+          margin-bottom: 10px;
+        }
+        input[type="submit"] {
+          padding: 10px 20px;
+          background-color: #4CAF50;
+          color: white;
+          border: none;
+          cursor: pointer;
+        }
+      </style>
+</head>
+<body>
+  <h1>Prueba</h1>
+  <form id="myForm" method="POST" action="{% url 'test_aux' %}">{% csrf_token %}
+    <label for="id_torneo">ID torneo:</label>
+    <input type="text" id="id_torneo" name="id_torneo" required>
+    <input type="submit" value="Consultar">
+  </form>
+</body>
+</html>
+</html>
+
